@@ -1,0 +1,13 @@
+# Site settings
+title: PsychStats
+email: manuel.gonzalez3@upr.edu
+description: > # this means to ignore newlines until "baseurl:"
+  Psicología, estadísticas, y un poco de emociones
+url: " https://mgonzalez3.github.io" # the base hostname & protocol for your site
+twitter_username:
+github_username:  mgonzalez3
+permalink: /:year/:month/:title.html
+
+# Build settings
+markdown: kramdown
+exclude: ['*.Rmd']
