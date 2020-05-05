@@ -1,7 +1,7 @@
 ---
-layout: page
+layout: default
 title: Publicaciones
 permalink: /publicaciones/
 ---
 
-# Prueba 
+# Cognición y Educación 
