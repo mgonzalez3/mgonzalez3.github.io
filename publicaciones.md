@@ -1,6 +1,7 @@
 ---
-layout: post
+layout: default
 title:  Publicaciones
+permalink: /publicaciones
 ---
 
 # Cognición y Educación 
