@@ -18,6 +18,7 @@ $background-color: #fdfdfd;
 $brand-color:      #00a3cc;
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 $theme-color:       #98b4d4;
 $theme-color-light: lighten($theme-color, 40%);
 $theme-color-dark:  darken($theme-color, 15%);
@@ -31,6 +32,11 @@ $nav-color: #395870;
 $nav-color-light: #49708f;
 $nav-color-dark: #293f50;
 $nav-background: #314b60;
+=======
+$navy-color:       #000080;
+$navy-color-light: lighten($navy-color, 40%);
+$navy-color-dark:  darken($navy-color, 15%);
+>>>>>>> parent of 9f973ef... - changed color variable name
 
 $on-palm:          600px;
 $on-laptop:        800px;
