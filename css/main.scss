@@ -17,9 +17,15 @@ $text-color:       #111;
 $background-color: #fdfdfd;
 $brand-color:      #00a3cc;
 
+<<<<<<< HEAD
 $theme-color:       #98b4d4;
 $theme-color-light: lighten($theme-color, 40%);
 $theme-color-dark:  darken($theme-color, 15%);
+=======
+$navy-color:       #000080;
+$navy-color-light: lighten($navy-color, 40%);
+$navy-color-dark:  darken($navy-color, 15%);
+>>>>>>> parent of 9f973ef... - changed color variable name
 
 $nav-color: #395870;
 $nav-color-light: #49708f;
