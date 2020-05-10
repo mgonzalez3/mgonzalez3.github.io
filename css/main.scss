@@ -17,9 +17,14 @@ $text-color:       #111;
 $background-color: #fdfdfd;
 $brand-color:      #00a3cc;
 
-$theme-color:       #000080;
+$theme-color:       #98b4d4;
 $theme-color-light: lighten($theme-color, 40%);
 $theme-color-dark:  darken($theme-color, 15%);
+
+$nav-color: #395870;
+$nav-color-light: #49708f;
+$nav-color-dark: #293f50;
+$nav-background: #314b60;
 
 $on-palm:          600px;
 $on-laptop:        800px;
