@@ -24,18 +24,17 @@
 
 /** site navigation **/
 .site-nav {
-    body {
-        margin-top: 13px;
-         float: right;
-    }
+
+    margin-top: 13px;
+    float: right;
 
     .navigation ul {
         font: bold 11px "Helvetica Neue", $base-font-family;
         margin: 0;
         padding: 0;
         text-transform: uppercase;
-
     }
+
     .navigation li {
         display: inline-block;
     }
@@ -47,24 +46,20 @@
         color: #fff;
         padding: 12px 20px;
         text-decoration: none;
-
     }
 
     .navigation a:hover {
         background: $nav-background;
         box-shadow: inset 0 0 10px 1px rgba(0, 0, 0, .3);
-
     }
 
     .navigation li:first-child a {
         border-radius: 4px 0 0 4px;
-
     }
 
     .navigation li:last-child a {
         border-right: 0;
         border-radius: 0 4px 4px 0;
-
     }
 }
 
