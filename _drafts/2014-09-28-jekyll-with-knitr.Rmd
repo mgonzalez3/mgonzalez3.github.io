@@ -64,4 +64,4 @@ Jekyll supports a number of Markdown renderers, such as kramdown, redcarpet, rdi
 
 [^5]: If you choose to generate your Jekyll website locally, and push the HTML files to GitHub, you will need the file [`.nojekyll`](https://help.github.com/articles/using-jekyll-with-pages) in the root directory of your website.
 
-
+I'd love you to [fork](https://github.com/yihui/knitr-jekyll) this repository, make some (hopefully minor) changes, and [let me know](https://github.com/yihui/knitr-jekyll/issues) your success of using Pandoc with Jekyll. Happy hacking, and good luck!
