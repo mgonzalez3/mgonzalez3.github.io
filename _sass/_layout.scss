@@ -2,18 +2,8 @@
  * Site header
  */
 .site-header {
-<<<<<<< HEAD
-<<<<<<< HEAD
-    border-top: 5px solid $theme-color;
-    border-bottom: 5px solid $theme-color-light;
-=======
-    border-top: 5px solid $navy-color;
-    border-bottom: 1px solid $navy-color-light;
->>>>>>> parent of 9f973ef... - changed color variable name
-=======
-    border-top: 5px solid $navy-color;
-    border-bottom: 1px solid $navy-color-light;
->>>>>>> parent of 9f973ef... - changed color variable name
+    border-top: 5px solid $theme-color-dark;
+    border-bottom: 1px solid $theme-color-light;
     min-height: 56px;
 
     // Positioning context for the mobile navigation icon
@@ -29,11 +19,10 @@
 
     &,
     &:visited {
-        color: $navy-color;
+        color: $theme-color-dark;
     }
 }
 
-/** site navigation **/
 .site-nav {
     float: right;
     line-height: 56px;
@@ -57,7 +46,7 @@
         top: 9px;
         right: 30px;
         background-color: $background-color;
-        border: 1px solid $navy-color-light;
+        border: 1px solid $theme-color-light;
         border-radius: 5px;
         text-align: right;
 
@@ -75,7 +64,7 @@
                 height: 15px;
 
                 path {
-                    fill: $navy-color-dark;
+                    fill: $theme-color-dark;
                 }
             }
         }
@@ -97,24 +86,13 @@
     }
 }
 
-<<<<<<< HEAD
-/** Site footer **/
 
-=======
-
-<<<<<<< HEAD
 
 /**
  * Site footer
  */
->>>>>>> parent of 9f973ef... - changed color variable name
-=======
-/**
- * Site footer
- */
->>>>>>> parent of 9f973ef... - changed color variable name
 .site-footer {
-    border-top: 1px solid $navy-color-light;
+    border-top: 1px solid $theme-color-light;
     padding: $spacing-unit 0;
 }
 
@@ -131,7 +109,7 @@
 
 .footer-col-wrapper {
     font-size: 15px;
-    color: $navy-color;
+    color: $theme-color;
     margin-left: -$spacing-unit / 2;
     @extend %clearfix;
 }
@@ -188,8 +166,7 @@
 }
 
 .page-heading {
-    font-size: 42px;
-
+    font-size: 20px;
 }
 
 .post-list {
@@ -203,7 +180,7 @@
 
 .post-meta {
     font-size: $small-font-size;
-    color: $navy-color;
+    color: $theme-color;
 }
 
 .post-link {
