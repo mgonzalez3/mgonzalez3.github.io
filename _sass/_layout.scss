@@ -1,7 +1,7 @@
 /** Site header **/
 
 .site-header {
-    border-top: 5px solid $theme-color-light;
+    border-top: 5px solid $theme-color;
     border-bottom: 5px solid $theme-color-light;
     min-height: 56px;
 
@@ -22,69 +22,52 @@
     }
 }
 
+/** site navigation **/
 .site-nav {
+
     float: right;
-    line-height: 56px;
-
-    .menu-icon {
-        display: none;
+    body {
+        margin-top: 13px;
     }
 
-    .page-link {
-        color: $text-color;
-        line-height: $base-line-height;
+    ul {
+        font: bold 11px "Helvetica Neue", $base-font-family;
+        margin: 0;
+        padding: 0;
+        text-transform: uppercase;
 
-        // Gaps between nav items, but not on the first one
-        &:not(:first-child) {
-            margin-left: 20px;
-        }
+    }
+    li {
+        display: inline-block;
     }
 
-    @include media-query($on-palm) {
-        position: absolute;
-        top: 9px;
-        right: 30px;
-        background-color: $background-color;
-        border: 1px solid $theme-color-light;
-        border-radius: 5px;
-        text-align: right;
+    a {
+        background: $nav-color;
+        background: linear-gradient($nav-color-light, $nav-background);
+        border-right: 1px solid rgba(0, 0, 0, .3);
+        color: #fff;
+        padding: 12px 20px;
+        text-decoration: none;
 
-        .menu-icon {
-            display: block;
-            float: right;
-            width: 36px;
-            height: 26px;
-            line-height: 0;
-            padding-top: 10px;
-            text-align: center;
+    }
 
-            > svg {
-                width: 18px;
-                height: 15px;
+    a:hover {
+        background: $nav-background;
+        box-shadow: inset 0 0 10px 1px rgba(0, 0, 0, .3);
 
-                path {
-                    fill: $theme-color-dark;
-                }
-            }
-        }
+    }
 
-        .trigger {
-            clear: both;
-            display: none;
-        }
+    li:first-child a {
+        border-radius: 4px 0 0 4px;
 
-        &:hover .trigger {
-            display: block;
-            padding-bottom: 5px;
-        }
+    }
 
-        .page-link {
-            display: block;
-            padding: 5px 10px;
-        }
+    li:last-child a {
+        border-right: 0;
+        border-radius: 0 4px 4px 0;
+
     }
 }
-
 
 
 /** Site footer **/
