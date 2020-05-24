@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Psychstats</title>
+    <link>/</link>
+    <description>Recent content on Psychstats</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Sun, 24 May 2020 00:00:00 +0000</lastBuildDate>
+    
+	<atom:link href="/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Cómo hacer una Prueba T en R</title>
+      <link>/2020/05/24/c%C3%B3mo-hacer-una-prueba-t-en-r/</link>
+      <pubDate>Sun, 24 May 2020 00:00:00 +0000</pubDate>
+      
+      <guid>/2020/05/24/c%C3%B3mo-hacer-una-prueba-t-en-r/</guid>
+      <description>Nivel: Básico (Curso introductorio de estadística)
+Nota: El énfasis de este escrito es en los aspectos de programación en R. Por lo que tratare de evitar formulas matemáticas siempre que sea posible.
+La prueba de T para dos promediosEn psicología y educación muchas veces deseamos comparar dos promedios de grupos independientes o pareados. Para esto podemos usar una Prueba T. Esta es una prueba estadística que nos permite comparar dos promedios cuando desconocemos las varianzas o desviaciones estándares de la población.</description>
+    </item>
+    
+    <item>
+      <title>Publicaciones</title>
+      <link>/publicaciones/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/publicaciones/</guid>
+      <description>Cognición y EducaciónCordero-Arroyo, G., González-González, M., Bermonti-Pérez, M., &amp; Moreno Torres, M. (2018). Intervención Neuropsicológica para Estudiantes con Inatención, Hiperactividad y Dificultades en lectura. Revista Puertorriqueña de Psicología, 29(2), 254-268. Díaz-Flores, W., González-González, M., &amp; Moreno Torres, M. (2018). Desempeño en el CognitiveAssessment System 2 Español de estudiantes de Puerto Rico identificados como dotados. RevistaPuertorriqueña de Psicología, 29(2), 316-330. Moreno-Torres, M. A., Ortiz-Ortiz, Y.</description>
+    </item>
+    
+    <item>
+      <title>Un poco sobre mí...</title>
+      <link>/biografia/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/biografia/</guid>
+      <description>Poseo un PhD de la Universidad de Puerto Rico (UPR) en Río Piedras en ladisciplina de Psicología académica-investigativa. También poseo una maestría ensalud pública con concentración en bioestadística de la UPR recinto de cienciasmédicas. En estos momentos me encuentro comenzado mi carrera como psicólogocuantitativo (estadístico) e investigador. Apenas logre completar mi gradoen diciembre del 2019 y cuando ocurrió una pandemia global. Tomando enconsideración esta situación los único que puedo hacer compartir por este mediomis intereses.</description>
+    </item>
+    
+  </channel>
+</rss>

@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Tags on Psychstats</title>
+    <link>/tags/</link>
+    <description>Recent content in Tags on Psychstats</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Sun, 24 May 2020 00:00:00 +0000</lastBuildDate>
+    
+	<atom:link href="/tags/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Behrens-Fisher</title>
+      <link>/tags/behrens-fisher/</link>
+      <pubDate>Sun, 24 May 2020 00:00:00 +0000</pubDate>
+      
+      <guid>/tags/behrens-fisher/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Intro-para-R</title>
+      <link>/tags/intro-para-r/</link>
+      <pubDate>Sun, 24 May 2020 00:00:00 +0000</pubDate>
+      
+      <guid>/tags/intro-para-r/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Prueba-T</title>
+      <link>/tags/prueba-t/</link>
+      <pubDate>Sun, 24 May 2020 00:00:00 +0000</pubDate>
+      
+      <guid>/tags/prueba-t/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Welch-T</title>
+      <link>/tags/welch-t/</link>
+      <pubDate>Sun, 24 May 2020 00:00:00 +0000</pubDate>
+      
+      <guid>/tags/welch-t/</guid>
+      <description></description>
+    </item>
+    
+  </channel>
+</rss>

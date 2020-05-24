@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html lang="en-us">
+  <head>
+    <meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="generator" content="Hugo 0.71.0" />
+
+
+<title>Cómo hacer una Prueba T en R - Psychstats</title>
+<meta property="og:title" content="Cómo hacer una Prueba T en R - Psychstats">
+
+
+  <link href='/favicon.ico' rel='icon' type='image/x-icon'/>
+
+
+
+  
+
+
+
+
+
+
+
+
+<link href='//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/github.min.css' rel='stylesheet' type='text/css' />
+
+
+
+<link rel="stylesheet" href="/css/fonts.css" media="all">
+<link rel="stylesheet" href="/css/main.css" media="all">
+
+
+<script src="https://kit.fontawesome.com/c23cf4bc3c.js" crossorigin="anonymous"></script>
+
+
+  </head>
+  <body>
+    <div class="wrapper">
+      <header class="header">
+        <nav class="nav">
+
+  <a href="/" class="nav-logo">
+    <img src="/images/logo.png"
+         width="80"
+         height="50"
+         alt="Logo">
+  </a>
+
+
+  <ul class="nav-links">
+    
+    <li><a href="/">Blog</a></li>
+    
+    <li><a href="/biografia/">Sobre Mí</a></li>
+    
+    <li><a href="/publicaciones">Publicaciones</a></li>
+    
+    <li><a href="https://github.com/mgonzalez3">GitHub</a></li>
+    
+    <li><a href="../files/MGG-CV-2020.pdf">CV</a></li>
+    
+  </ul>
+</nav>
+
+      </header>
+
+
+<main class="content" role="main">
+
+  <article class="article">
+    
+    <span class="article-duration">7 min read</span>
+    
+
+    <h1 class="article-title">Cómo hacer una Prueba T en R</h1>
+
+    
+    <span class="article-date">2020-05-24</span>
+    
+
+    <div class="article-content">
+      
+
+
+<p><strong>Nivel: Básico</strong> (Curso introductorio de estadística)</p>
+<p><strong>Nota:</strong> El énfasis de este escrito es en los aspectos de programación en R. Por lo que tratare de evitar formulas matemáticas siempre que sea posible.</p>
+<div id="la-prueba-de-t-para-dos-promedios" class="section level2">
+<h2>La prueba de T para dos promedios</h2>
+<p>En psicología y educación muchas veces deseamos comparar dos promedios de grupos independientes o pareados. Para esto podemos usar una <em>Prueba T</em>. Esta es una prueba estadística que nos permite comparar dos promedios cuando desconocemos las varianzas o desviaciones estándares de la población. Las hipótesis estadística de las prueba son las siguientes:</p>
+<p><span class="math display">\[H_0: \mu_2 \:-\: \mu_1 = 0\]</span>
+<span class="math display">\[H_1: \mu_2 \:-\: \mu_1 \neq 0\]</span>
+<br></p>
+<p>La prueba compara en los datos obtenidos sí la diferencia observada entre los promedios es distinta de 0 asumiendo que provienen de una población donde la diferencia es 0. La descripción anterior puede ser confusa. Por el momento podemos decir que buscamos saber sí la diferencia de los promedios es distinta de 0.</p>
+<p>En aquellas situaciones que tenemos grupos pareados haremos una <em>Prueba T para muestras pareadas</em>. En el caso de grupos independientes hacemos una <em>Prueba T para muestras independientes</em>. Para poder usar la prueba de T debemos considerar dos supuestos:</p>
+<ul>
+<li>Normalidad de la distribución observada (pareados e independientes)</li>
+<li>Homogeneidad (igualdad) de las varianzas (independientes)</li>
+</ul>
+<div id="el-problema-de-behrens-fisher" class="section level3">
+<h3>El problema de Behrens-Fisher</h3>
+<p>En los casos de grupos independientes la prueba T requiere que los grupos pertenezcan a poblaciones con varianzas iguales (supuesto de homogeneidad). En grupos independientes con tamaños distintos esto es problemático. En estos casos, que los grupos no tienen el mismo tamaño las diferencias en las varianzas pueden alterar los resultados obtenidos. En casos que trabajamos con grupos pareados podemos estar tranquilos, ya que este problema no aplica.</p>
+<p>Este problema es conocido como el <strong>problema de Behrens-Fisher</strong> se trata de como comparar los promedios de dos poblaciones cuando se desconoce la proporción de sus varianzas (Scheffé, 1970). En otras palabras, es un problema de como determinar la distribución de la prueba estadística (la distribución de t) que nos provee el valor de T correcto y poder hacer inferencias.</p>
+</div>
+<div id="soluciones" class="section level3">
+<h3>Soluciones</h3>
+<p>A pesar de tener mas de 100 años este problema no posee una solución exacta en la estadística. Ante esto tenemos dos alternativas:</p>
+<ol style="list-style-type: decimal">
+<li>Realizar una prueba estadística para determinar la igualdad de varianzas entre los grupos y al confirmar usar la prueba T</li>
+<li>Utilizar la aproximación de Welch–Satterthwaite para varianzas desiguales</li>
+<li>Hacer una prueba T por medio de ‘Bootstrap’</li>
+</ol>
+</div>
+<div id="pasos-para-determinar-la-igualdad-de-varianzas" class="section level3">
+<h3>Pasos para determinar la igualdad de varianzas</h3>
+<p>Primer paso es ignorar este paso e ir directo a realizar una prueba de T utilizando la aproximación de Welch–Satterthwaite. Según Hayes y Cai (2007) realizar una prueba T condicionada en una prueba de varianzas como Levene’s o F-ratio no es la mejor estrategia. Aunque ambas estas estrategias tienen errores tipo I cerca de 0.05 no ofrecen una ventaja sobre realizar la prueba de Welch’s o una Prueba de Welch’s por medio de Bootstrap. Según estos autores realizar una prueba T que asume la desigualdad de varianzas debe ser la primera opción.</p>
+</div>
+</div>
+<div id="como-realizar-una-prueba-t-en-r" class="section level2">
+<h2>Como realizar una prueba T en R</h2>
+<div id="muestras-pareadas" class="section level3">
+<h3>Muestras Pareadas</h3>
+<p>En el siguiente ejemplo observamos el código en <em>R</em> para comparar dos grupo asumiendo que provienen de poblaciones con varianzas iguales y muestras pareadas. Para resolveremos el 7.16 del libro de Howell (2013).</p>
+<blockquote>
+<p>Hoaglin, Mosteller, and Tukey (1983) presentan datos sobre los niveles de beta-endorfina en la sangre en función del estrés. Tomaron los niveles de beta-endorfina de 19 pacientes 12 horas antes de una cirugía y 10 minutos antes de la cirugía. Deseamos saber que efecto tienen el aumento de estrés en los niveles de endorfina en la sangre?</p>
+</blockquote>
+<pre class="r"><code># Datos estan fmol/ml
+grupo1 = c(10.0, 6.5, 8.0, 12.0, 5.0, 11.5, 5.0, 3.5, 7.5, 5.8, 4.7, 8.0, 
+           7.0, 17.0, 8.8, 17.0, 15.0, 4.4, 2.0) # 12 horas 
+grupo2 = c(6.5, 14.0, 13.5, 18.0, 14.5, 9.0, 18.0, 42.0, 7.5, 6.0, 25.0, 12.0,
+           52.0, 20.0, 16.0, 15.0, 11.5, 2.5, 2.0) # 10 minutos
+
+# Comando de t.test indica que pareado (paired) es cierto (TRUE).
+t.test(x = grupo2, y = grupo1, alternative = &quot;two.sided&quot;, mu = 0, paired = TRUE, var.equal = TRUE)</code></pre>
+<pre><code>## 
+##  Paired t-test
+## 
+## data:  grupo2 and grupo1
+## t = 2.4827, df = 18, p-value = 0.02313
+## alternative hypothesis: true difference in means is not equal to 0
+## 95 percent confidence interval:
+##   1.183972 14.216028
+## sample estimates:
+## mean of the differences 
+##                     7.7</code></pre>
+<p>Podemos observar que los resultados el valor de <em>p</em> es de 0.023 esto es menor de 0.05 por lo cual la diferencia es estadísticamente significativa. Podemos concluir que hay una diferencia en los niveles de endorfina entre los grupos. También el resultado del programado nos provee las diferencia entre los promedios y su intervalo de confianza que es (1.18, <strong>7.7</strong>, 14.22).</p>
+</div>
+<div id="muestras-independientes" class="section level3">
+<h3>Muestras independientes</h3>
+<p>Para este ejemplo realizaremos el ejercicio 7.31 del mismo libro (Howell, 2013).</p>
+<blockquote>
+<p>Everitt tomo medidas del peso de niñas con anorexia. Había dos grupos: 1) un grupo de comparación (control) y 2) Niñas que recibieron terapia cognitiva conductual. Everitt deseaba determinar si aumentaban de peso al recibir la intervención.</p>
+</blockquote>
+<pre class="r"><code># Cambio de peso al final de la intevención. Numeros positivos es aumento de peso
+grupo1 = c(-05, -9.3, -5.4, 12.3, -2.0, -10.2, -12.2, 11.6, -7.1, 6.2, -0.2, 
+           -9.2, 8.3, 3.3, 11.3, 0.0, -1.0, -10.6, -4.6, -6.7, 2.8, 0.3, 1.8, 
+           3.7, 15.9, -10.2) # Control
+grupo2 = c(1.7, 0.7, -0.1, -0.7, -3.5, 14.9, 3.5, 17.1, -7.6, 1.6, 11.7, 6.1,
+           1.1, -4.0, 20.9, -9.1, 2.1, -1.4, 1.4, -0.3, -3.7, -0.8, 2.4, 12.6, 
+           1.9, 3.9, 0.1, 15.4, -0.7) # Cognitiva conductual
+
+# Comando de t.test indica que pareado (paired) es falso (FALSE). También el comando de varianzas iguales (var.equal) es falso
+resultado &lt;- t.test(x = grupo2, y = grupo1, alternative = &quot;two.sided&quot;, mu = 0, 
+       paired = FALSE, var.equal = FALSE)
+
+resultado # se guardo el valor de t en esta variable para re-usarlo en para la prueba T de bootstrap.</code></pre>
+<pre><code>## 
+##  Welch Two Sample t-test
+## 
+## data:  grupo2 and grupo1
+## t = 1.745, df = 50.85, p-value = 0.08702
+## alternative hypothesis: true difference in means is not equal to 0
+## 95 percent confidence interval:
+##  -0.5464425  7.8063894
+## sample estimates:
+##  mean of x  mean of y 
+##  3.0068966 -0.6230769</code></pre>
+<p>Al indicar estos parámetros R realiza una prueba de Welch para dos muestras independientes. El valor de <em>p</em> es 0.09, esto es mayor de 0.05 por lo cual no es estadisticamente significativo. No tenemos evidencia de que la hipótesis nula es falsa, o que hayan diferencias entre los grupos.</p>
+</div>
+<div id="prueba-t-bootstrap" class="section level3">
+<h3>Prueba T Bootstrap</h3>
+<p>Este parte de como realizar una prueba T por bootstrap la cubriré en otro post.</p>
+</div>
+</div>
+<div id="formulas-para-la-prueba-t-de-welchs" class="section level2">
+<h2>Formulas para la prueba T de Welch’s</h2>
+<p><span class="math display">\[t_{welch&#39;s} =\: \frac{(\mu_{2} - \mu_{1})-(\bar{X_{2}} - \bar{X_{1})}} {\sqrt{\frac{S_{1}^{2}}{n_{1}-1} + \frac{S_{2}^{2}}{n_{1}-1}}}\]</span></p>
+<p>En donde el valor de los grados de libertad se obtienen con la siguiente formula:</p>
+<p><span class="math display">\[df&#39; =\: \frac{ (\frac{S^2_{1}}{n_{1}} \:+\:  \frac{S^2_{2}}{n_{2}})^2 } {\frac{(S^2_{1})^2}{n_{1}\:-\:1} + \frac{(S^2_{2})^2}{n_{2}\:-\:1}}\]</span></p>
+<p>Utilizando estas dos formula se obtiene un valor crítico de T de Welch. Este valor crítico se busca en las tablas de distribución de T para Welch’s. Usualmente los valores de grados de libertad obtenidos (<em>df’</em>) van a ser números decimales.</p>
+</div>
+<div id="resumen" class="section level2">
+<h2>Resumen</h2>
+<ul>
+<li>Para grupos pareados realizar una prueba T pareada (paired = TRUE) con varianzas iguales (var.equal = TRUE).</li>
+<li>Para grupos independientes con el mismo tamaño (n iguales) y con distribución normal
+podemos utilizar una prueba T asumiendo varianzas iguales (var.equal = TRUE).</li>
+<li>Para grupos independientes con n diferentes podemos realizar una prueba T de Welch’s (var.equal = FALSE).</li>
+<li>En casos de desviaciones de normalidad algunas artículos establecen que la prueba T de Welch’s es robusta, por el momento esta es una alternativa.</li>
+</ul>
+</div>
+<div id="referencias" class="section level2">
+<h2>Referencias</h2>
+<ul>
+<li><p>Hayes, A. F., &amp; Cai, L. (2007). Further evaluating the conditional decision rule for comparing two independent means [Research]. British Journal of Mathematical and Statistical Psychology, 60, 217-244. <a href="https://doi.org/10.1348/000711005X62576" class="uri">https://doi.org/10.1348/000711005X62576</a></p></li>
+<li><p>Howell, D. C. (2013). Statistical Methods for Psychology (8th ed.). Belmont, CA: Wadsworth, Cengage Learning.</p></li>
+<li><p>Scheffé, H. (1970). Practical Solutions of the Behrens-Fisher Problem. Journal of the American Statistical Association, 65(332), 1501-1508.</p></li>
+</ul>
+</div>
+
+    </div>
+  </article>
+
+  
+<section id="comments">
+  <div id="disqus_thread"></div>
+  <script>
+  var disqus_config = function () {
+  
+  };
+  (function() {
+    var inIFrame = function() {
+      var iframe = true;
+      try { iframe = window.self !== window.top; } catch (e) {}
+      return iframe;
+    };
+    if (inIFrame()) return;
+    var d = document, s = d.createElement('script');
+    s.src = '//psychstats.disqus.com/embed.js'; s.async = true;
+    s.setAttribute('data-timestamp', +new Date());
+    (d.head || d.body).appendChild(s);
+  })();
+  </script>
+  <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+</section>
+
+
+
+</main>
+
+      <footer class="footer">
+        <ul class="footer-links">
+          <li>
+            <a href="/index.xml" type="application/rss+xml" target="_blank">RSS feed</a>
+          </li>
+          <li>
+            <a href="https://gohugo.io/" class="footer-links-kudos">Made with <img src="/images/hugo-logo.png" alt="Img link to Hugo website" width="22" height="22"></a>
+          </li>
+        </ul>
+        <p>&copy; 2020 Manuel González-González</p>
+      </footer>
+
+    </div>
+    
+
+
+
+<script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
+
+
+
+<script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/r.min.js"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/yaml.min.js"></script>
+<script>hljs.configure({languages: []}); hljs.initHighlightingOnLoad();</script>
+
+
+
+    
+<script src="/js/math-code.js"></script>
+<script async src="//cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-MML-AM_CHTML"></script>
+
+
+    
+  </body>
+</html>
+
