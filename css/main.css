@@ -23,7 +23,6 @@ h2, h3, h4, h5, h6 {
 }
 
 
-
 a {
   outline: none;
 }
@@ -169,7 +168,11 @@ code {
   padding: 6px;
 }
 
+#my-name {
+  font-weight: bolder;
+}
 
+/**End of custom formatting**/
 
 .highlight {
   border-radius: 3px;
@@ -278,7 +281,8 @@ code {
   }
 
   .nav-logo {
-    margin-top: -13px;
+    float: left;
+    margin: 8 0 0 -13px;
   }
 
   .nav-logo img {
@@ -286,11 +290,12 @@ code {
   }
 
   .nav-links {
+
     font-size: 18px;
   }
 
   .nav-links li {
-    margin: 0 0 0 30px;
+    margin: 0 0 0 15px;
   }
 
   .content {
