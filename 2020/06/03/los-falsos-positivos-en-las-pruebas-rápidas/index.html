@@ -108,7 +108,7 @@
 <p>El 23 de mayo del 2020 fue la ultima vez que el Departamento de Salud de Puerto Rico reportó la cantidad total de pruebas realizadas <a href="https://www.primerahora.com/noticias/gobierno-politica/notas/salud-corrige-datos-89430-pruebas-de-coronavirus-realizadas-en-puerto-rico-hasta-el-jueves/">(ver Primera Hora)</a>. Según este reporte en Puerto Rico hasta el 19 de mayo se habían realizado 89,430 pruebas en total.
 De estas 47,729 era pruebas serológicas o rápidas. Los resultados son 2,179 (4.6%) arrojaron positivo a los anticuerpos para Covid-19 y 45,550 (95.4%) arrojaron negativo en la prueba. Realmente se desconoce cuantos de los 2,179 resultados positivos son casos activos del virus. También se desconoce la calidad de las pruebas utilizadas, pero se sabe que varias de las pruebas adquiridas son de la marca pharmatech <a href="https://www.elnuevodia.com/noticias/locales/nota/saludordenaretirarpruebasrapidasquecomproacastrobusinesstrasdesautorizaciondelafda-2571354/">(ver Nuevo Día)</a>. Aunque según la noticia enlazada estas pruebas ya no se autoriza su uso, no necesariamente las otras pruebas serológicas utilizadas son de mejor calidad.</p>
 <p>Según la <a href="https://webcache.googleusercontent.com/search?q=cache:22rMwPHqEb8J:https://www.phamatech.com/index3.php/category-1/covid19-igg-igm-rapid-test/+&amp;cd=1&amp;hl=en&amp;ct=clnk&amp;gl=pr&amp;lr=lang_es%7Clang_en">página web de Pharmatech</a> su prueba tiene una sensibilidad de 96.9% (95%CI: 88.7%-99.8%) y una especificidad de 96.3% (95%CI:93.4%-98.0%). Es posible utilizar esta información para hacer un estimado bien crudo de los posibles falsos positivos en el país.</p>
-<p>Al tomar en cuenta la cantidad de pruebas realizadas y la especificidad reportada se estima que pueden haber 1766 casos falsos positivos con intervalo de 955 a 3150. Sí todas las pruebas en realidad fueran negativas, aún así se espera encontrar desde 955 a 3150 casos positivos.</p>
+<p>Sí todas las pruebas en realidad fueran realmente negativas, al tomar en cuenta la cantidad de pruebas realizadas y la especificidad reportada se estima que pueden haber 1766 casos falsos positivos con intervalo de 955 a 3150. En un escenario donde no hay casos de Covid-19 un prueba serológica como la de Pharmatech encuentra desde 955 a 3150 casos positivos.</p>
 <figure style="text-align:center;">
 <img src="https://media.giphy.com/media/xT0GqtpF1NWd9VbstO/giphy.gif" alt="cat facepalm" id="post-gif" style="width:30.0%" /><br />
 
@@ -138,10 +138,14 @@ casos &lt;- round(47729 * .038) # Prevalencia
 # Estimación de los verdaderos positivos redondeado al entero
 (verdaderosPositivos &lt;- round(casos * sensibilidad) )</code></pre>
 <pre><code>## [1] 1758 1609 1810</code></pre>
-<p>Si la prevalencia es de 3.8% esperamos cerca de 3,457 resultados positivos en la prueba serológica con un intervalo de 2,728 a 4,639. Es probable que 3.8% sea un sobre estimando la prevalencia de Covid-19 en Puerto Rico.</p>
+<p>Si la prevalencia es de 3.8% esperamos cerca de 3,457 resultados positivos en la prueba serológica con un intervalo de 2,728 a 4,639. Es probable que 3.8% sea un sobre estimado la prevalencia de Covid-19 en Puerto Rico.</p>
 <pre class="r"><code># Total de positivos esperados
 (verdaderosPositivos + falsosPositivos)</code></pre>
 <pre><code>## [1] 3457 4639 2728</code></pre>
+<p>En este escenario con una prevalencia de 3.8% la probabilidad de tener la enfermedad dado un resultado positivo en la prueba serológica es de 51% con un intervalo de 35% a 66%.</p>
+<pre class="r"><code># Valor Predictivo Positivo de la Prueba
+verdaderosPositivos/(verdaderosPositivos + falsosPositivos) * 100</code></pre>
+<pre><code>## [1] 50.85334 34.68420 66.34897</code></pre>
 <p>Esto son estimados crudos pero reafirman la necesidad de saber la calidad y la cantidad de pruebas realizadas en el país. También enfatizan que no debemos utilizar las pruebas serológicas para diagnosticar por que en un escenario de prevalencia baja la mayoría de los resultados positivos en la prueba son resultados falsos positivos.</p>
 </div>
 <div id="referencias" class="section level2 unnumbered">
