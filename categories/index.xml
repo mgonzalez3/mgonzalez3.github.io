@@ -2,30 +2,39 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Categories on Psychstats</title>
-    <link>https://mgonzalez3.github.io/categories/</link>
+    <link>/categories/</link>
     <description>Recent content in Categories on Psychstats</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Sun, 24 May 2020 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Wed, 03 Jun 2020 00:00:00 +0000</lastBuildDate>
     
-	<atom:link href="https://mgonzalez3.github.io/categories/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="/categories/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
+      <title>Opiniones</title>
+      <link>/categories/opiniones/</link>
+      <pubDate>Wed, 03 Jun 2020 00:00:00 +0000</pubDate>
+      
+      <guid>/categories/opiniones/</guid>
+      <description></description>
+    </item>
+    
+    <item>
       <title>Estadísticas</title>
-      <link>https://mgonzalez3.github.io/categories/estad%C3%ADsticas/</link>
+      <link>/categories/estad%C3%ADsticas/</link>
       <pubDate>Sun, 24 May 2020 00:00:00 +0000</pubDate>
       
-      <guid>https://mgonzalez3.github.io/categories/estad%C3%ADsticas/</guid>
+      <guid>/categories/estad%C3%ADsticas/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Programación-R</title>
-      <link>https://mgonzalez3.github.io/categories/programaci%C3%B3n-r/</link>
+      <link>/categories/programaci%C3%B3n-r/</link>
       <pubDate>Sun, 24 May 2020 00:00:00 +0000</pubDate>
       
-      <guid>https://mgonzalez3.github.io/categories/programaci%C3%B3n-r/</guid>
+      <guid>/categories/programaci%C3%B3n-r/</guid>
       <description></description>
     </item>
     

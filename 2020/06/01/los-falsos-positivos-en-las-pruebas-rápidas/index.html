@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="en-us">
+  <head>
+    <meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="generator" content="Hugo 0.71.0" />
+
+
+<title>Los Falsos Positivos en las Pruebas Rápidas - Psychstats</title>
+<meta property="og:title" content="Los Falsos Positivos en las Pruebas Rápidas - Psychstats">
+
+
+  <link href='/favicon.ico' rel='icon' type='image/x-icon'/>
+
+
+
+  
+
+
+
+
+
+
+
+
+<link href='//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/github.min.css' rel='stylesheet' type='text/css' />
+
+
+
+<link rel="stylesheet" href="/css/fonts.css" media="all">
+<link rel="stylesheet" href="/css/main.css" media="all">
+
+
+<script src="https://kit.fontawesome.com/c23cf4bc3c.js" crossorigin="anonymous"></script>
+
+
+<link rel="stylesheet" href="/path/to/folder/css/academicons.min.css"/>
+
+
+  </head>
+  <body>
+    <div class="wrapper">
+      <header class="header">
+        <nav class="nav">
+
+  <a href="/" class="nav-logo">
+    <img src="/images/logo.png"
+         width="80"
+         height="50"
+         alt="Logo">
+  </a>
+
+
+  <ul class="nav-links">
+    
+    <li><a href="/">Blog</a></li>
+    
+    <li><a href="/biografia/">Sobre Mí</a></li>
+    
+    <li><a href="/publicaciones/">Publicaciones</a></li>
+    
+    <li><a href="https://github.com/mgonzalez3">GitHub</a></li>
+    
+    <li><a href="../files/MGG-CV-2020.pdf">CV</a></li>
+    
+  </ul>
+</nav>
+
+      </header>
+
+
+<main class="content" role="main">
+
+  <article class="article">
+    
+    <span class="article-duration">6 min read</span>
+    
+
+    <h1 class="article-title">Los Falsos Positivos en las Pruebas Rápidas</h1>
+
+    
+    <span class="article-date">2020-06-01</span>
+    
+
+    <div class="article-content">
+      
+
+<div id="TOC">
+<ul>
+<li><a href="#la-situación-en-puerto-rico">La situación en Puerto Rico</a></li>
+<li><a href="#datos-reportados-por-salud">Datos reportados por Salud</a></li>
+<li><a href="#estimación-de-los-falsos-positivos">Estimación de los Falsos Positivos</a></li>
+<li><a href="#referencias">Referencias</a></li>
+</ul>
+</div>
+
+<p><strong>Resumen Breve</strong>: Existen varias razones para no reportar los resultados de las pruebas rápidas como casos nuevos. Una de esta razones es que gran parte de los casos de Covid-19 reportados podrían ser falsos positivos.</p>
+<p>Estimados crudos indican que pueden haber 1766 falsos positivos.</p>
+<div id="la-situación-en-puerto-rico" class="section level2">
+<h2>La situación en Puerto Rico</h2>
+<p>En Puerto Rico el Departamento de Salud reporta diariamente los casos nuevos de Covid-19. Estos reportes se basan en dos tipos de pruebas: las pruebas rápidas o serológicas y las moleculares. Estos reportes me generan varias preocupaciones: 1) Se mezclan los resultado de pruebas serológicas y pruebas moleculares, 2) No se reporta la cantidad total de pruebas realizadas para cada tipo de prueba, y 3) En el caso de las serológicas no sabemos la calidad de las pruebas adquiridas.</p>
+<p>El Departamento de Salud no debería reportar las pruebas serológicas como casos nuevos de Covid-19. Los resultados de la prueba serológica no indican la presencia del virus, sino de anticuerpos en la sangre. El resultado positivo no indica si la persona tiene el virus. Lo único que indica es que en algún momento desde finales de febrero hasta hoy la persona estuvo contagiada. Con estos resultados no sabemos si la persona que dio positivo a la serológica es un caso activo. Esto se ha indicado de hace tiempo <a href="https://www.noticel.com/gobierno/ahora/top-stories/20200421/pr-utiliza-pruebas-rapidas-para-detectar-coronavirus-pero-la-fda-alerta-sobre-esa-practica/">(ver Noticel)</a>. Aún así la práctica del Departamento de Salud persiste.</p>
+<p>Los resultados de la prueba serológica tampoco indican la población que tiene inmunidad al Covid-19. Lamentablemente no se conoce todavía si la presencia de anticuerpos al Covid-19 es igual a tener inmunidad. Aunque es muy probable que este sea el caso. Otro problema es que un resultado positivo en la serológica puede ser un <strong>Falso Positivo</strong>. Esto quiere decir que la persona resulto positivo pero nunca estuvo infectada. A pesar de estas dificultades las pruebas serológicas sirven para estimar la cantidad de personas en la población que en algún momento han tenido el Covid-19 (prevalencia). Para esto es importante tener una idea de la calidad y cantidad de pruebas se han hecho en Puerto Rico.</p>
+<p>Es posible que en una población con 0 casos de Covid-19 se realicen estas pruebas y se detecten miles de casos positivos (falsos positivos). No hay datos públicos de la sensibilidad<a href="#fn1" class="footnote-ref" id="fnref1"><sup>1</sup></a> y especificidad<a href="#fn2" class="footnote-ref" id="fnref2"><sup>2</sup></a> de las pruebas serológicas utilizadas en Puerto Rico. Cómo no sabemos nada de esto, pues <strong>no tenemos ni idea de cuantos falsos positivos pueden haber</strong>. Considerando los posibles falsos positivos la practica de reportar las pruebas serológicas como casos nuevos es aún más preocupante.</p>
+<p>Utilizando la poca información que se conoce en Puerto Rico, voy a presentar un estimado bien crudo de cuantos falsos positivos esperar para reafirma este punto.</p>
+</div>
+<div id="datos-reportados-por-salud" class="section level2">
+<h2>Datos reportados por Salud</h2>
+<p>El 23 de mayo del 2020 fue la ultima vez que el Departamento de Salud de Puerto Rico reportó la cantidad total de pruebas realizadas <a href="https://www.primerahora.com/noticias/gobierno-politica/notas/salud-corrige-datos-89430-pruebas-de-coronavirus-realizadas-en-puerto-rico-hasta-el-jueves/">(ver Primera Hora)</a>. Según este reporte en Puerto Rico hasta el 19 de mayo se habían realizado 89,430 pruebas en total.
+De estas 47,729 era pruebas serológicas o rápidas. Los resultados son 2,179 (4.6%) arrojaron positivo a los anticuerpos para Covid-19 y 45,550 (95.4%) arrojaron negativo en la prueba. Realmente se desconoce cuantos de los 2,179 resultados positivos son casos activos del virus. También se desconoce la calidad de las pruebas utilizadas, pero se sabe que varias de las pruebas adquiridas son de la marca pharmatech <a href="https://www.elnuevodia.com/noticias/locales/nota/saludordenaretirarpruebasrapidasquecomproacastrobusinesstrasdesautorizaciondelafda-2571354/">(ver Nuevo Día)</a>. Aunque según la noticia enlazada estas pruebas ya no se autoriza su uso, no necesariamente las otras pruebas serológicas utilizadas son de mejor calidad.</p>
+<p>Según la <a href="https://webcache.googleusercontent.com/search?q=cache:22rMwPHqEb8J:https://www.phamatech.com/index3.php/category-1/covid19-igg-igm-rapid-test/+&amp;cd=1&amp;hl=en&amp;ct=clnk&amp;gl=pr&amp;lr=lang_es%7Clang_en">página web de Pharmatech</a> su prueba tiene una sensibilidad de 96.9% (95%CI: 88.7%-99.8%) y una especificidad de 96.3% (95%CI:93.4%-98.0%). Es posible utilizar esta información para hacer un estimado bien crudo de los posibles falsos positivos en el país.</p>
+<p>Al tomar en cuenta la cantidad de pruebas realizadas y la especificidad reportada se estima que pueden haber 1766 casos falsos positivos con intervalo de 955 a 3150. Sí todas las pruebas en realidad fueran negativas, aún así se espera encontrar desde 955 a 3150 casos positivos.</p>
+<figure style="text-align:center;">
+<img src="https://media.giphy.com/media/xT0GqtpF1NWd9VbstO/giphy.gif" alt="cat facepalm" id="post-gif" style="width:30.0%" /><br />
+
+</figure>
+</div>
+<div id="estimación-de-los-falsos-positivos" class="section level2">
+<h2>Estimación de los Falsos Positivos</h2>
+<p>Los estimados son bien crudos y se basan en la especificidad y sensibilidad de la prueba. Es importante enfatizar que se desconoce la prevalencia del Covid-19 en la población y estos resultados varían en base a la prevalencia. Pero si se asume que realmente las 47,729 pruebas que se han hecho son realmente negativas (No infectados) esperamos lo siguiente:</p>
+<pre class="r"><code>especificidad &lt;- c(.963, .934, .98)
+noInfectados &lt;- 47729
+
+# Estimación de los falsos positivos redoeandos al entero
+(falsosPositivos &lt;- round(noInfectados - (noInfectados * especificidad)) )</code></pre>
+<pre><code>## [1] 1766 3150  955</code></pre>
+<p>En este escenario hay 1,766 posibles falsos positivos con un intervalo de 955 a 3150. Esto indica que aún con 0 casos de Covid-19 en Puerto Rico los 2,179 resultados positivos están dentro del intervalo de falsos Positivos. No hay evidencia de que la prueba detecto casos.</p>
+<p>Si asumimos que la prevalencia de Covid-19 es 3.8% de los 47,729 esperamos que 1,814 tengan realmente el virus. Tendríamos 45,915 personas no infectadas con el virus. En este escenario esperamos 1699 falsos positivos con un intervalo de 918 a 3030.</p>
+<pre class="r"><code>especificidad &lt;- c(.963, .934, .98)
+noInfectados &lt;- 45915
+
+# Estimación de los falsos positivos redoeandos al entero
+(falsosPositivos &lt;- round(noInfectados - (noInfectados * especificidad)) )</code></pre>
+<pre><code>## [1] 1699 3030  918</code></pre>
+<p>También en este escenario esperamos que basado en la sensibilidad se identifiquen casos reales. De los 1,814 esperamos identificar 1,758 con un intervalo de 1,608 a 1810.</p>
+<pre class="r"><code>sensibilidad &lt;- c(.969, .887, .998)
+casos &lt;- round(47729 * .038) # Prevalencia
+
+# Estimación de los verdaderos positivos redondeado al entero
+(verdaderosPositivos &lt;- round(casos * sensibilidad) )</code></pre>
+<pre><code>## [1] 1758 1609 1810</code></pre>
+<p>Si la prevalencia es de 3.8% esperamos cerca de 3,457 resultados positivos en la prueba serológica con un intervalo de 2,728 a 4,639. Es probable que 3.8% sea un sobre estimando la prevalencia de Covid-19 en Puerto Rico.</p>
+<pre class="r"><code># Total de positivos esperados
+(verdaderosPositivos + falsosPositivos)</code></pre>
+<pre><code>## [1] 3457 4639 2728</code></pre>
+<p>Esto son estimados crudos pero reafirman la necesidad de saber la calidad y la cantidad de pruebas realizadas en el país. También enfatizan que no debemos utilizar las pruebas serológicas para diagnosticar por que en un escenario de prevalencia baja la mayoría de los resultados positivos en la prueba son resultados falsos positivos.</p>
+</div>
+<div id="referencias" class="section level2 unnumbered">
+<h2>Referencias</h2>
+<div id="refs" class="references">
+<div id="ref-Celentano2019">
+<p>Celentano, D. D., &amp; Szklo, M. (2019). <em>Gordis epidemiology</em> (6th ed.) [Book]. Elsevier.</p>
+</div>
+</div>
+</div>
+<div class="footnotes">
+<hr />
+<ol>
+<li id="fn1"><p>La sensibilidad de una prueba se define como la capacidad para identificar correctamente aquellas personas que poseen la enfermedad <span class="citation">(Celentano &amp; Szklo, 2019)</span>.<a href="#fnref1" class="footnote-back">↩</a></p></li>
+<li id="fn2"><p>La especificidad de una prueba se define como la capacidad para identificar correctamente aquellas personas que no poseen la enfermedad.<a href="#fnref2" class="footnote-back">↩</a></p></li>
+</ol>
+</div>
+
+    </div>
+  </article>
+
+  
+    <span>
+<section id="comments">
+  <div id="disqus_thread"></div>
+  <script>
+  var disqus_config = function () {
+  
+  };
+  (function() {
+    var inIFrame = function() {
+      var iframe = true;
+      try { iframe = window.self !== window.top; } catch (e) {}
+      return iframe;
+    };
+    if (inIFrame()) return;
+    var d = document, s = d.createElement('script');
+    s.src = '//psychstats.disqus.com/embed.js'; s.async = true;
+    s.setAttribute('data-timestamp', +new Date());
+    (d.head || d.body).appendChild(s);
+  })();
+  </script>
+  <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+</section>
+
+</span>
+  
+
+</main>
+
+      <footer class="footer">
+        <ul class="footer-links">
+          <li>
+            <a href="/index.xml" type="application/rss+xml" target="_blank">RSS feed</a>
+          </li>
+          <li>
+            <a href="https://gohugo.io/" class="footer-links-kudos">Made with <img src="/images/hugo-logo.png" alt="Img link to Hugo website" width="22" height="22"></a>
+          </li>
+        </ul>
+        <p>&copy; 2020 Manuel González-González</p>
+      </footer>
+
+    </div>
+    
+
+
+
+<script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
+
+
+
+<script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/r.min.js"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/yaml.min.js"></script>
+<script>hljs.configure({languages: []}); hljs.initHighlightingOnLoad();</script>
+
+
+
+    
+
+    
+  </body>
+</html>
+

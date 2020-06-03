@@ -1,14 +1,14 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Posts on Psychstats</title>
-    <link>/post/</link>
-    <description>Recent content in Posts on Psychstats</description>
+    <title>Medición on Psychstats</title>
+    <link>/tags/medici%C3%B3n/</link>
+    <description>Recent content in Medición on Psychstats</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <lastBuildDate>Wed, 03 Jun 2020 00:00:00 +0000</lastBuildDate>
     
-	<atom:link href="/post/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="/tags/medici%C3%B3n/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
@@ -19,17 +19,6 @@
       <guid>/2020/06/03/los-falsos-positivos-en-las-pruebas-r%C3%A1pidas/</guid>
       <description>La situación en Puerto RicoDatos reportados por SaludEstimación de los Falsos PositivosReferenciasResumen Breve: Existen varias razones para no reportar los resultados de las pruebas rápidas como casos nuevos. Una de esta razones es que gran parte de los casos de Covid-19 reportados podrían ser falsos positivos. Mis estimados crudos indican que pueden haber cerca de 1766 falsos positivos o más.
 La situación en Puerto RicoEn Puerto Rico el Departamento de Salud reporta diariamente los casos nuevos de Covid-19.</description>
-    </item>
-    
-    <item>
-      <title>Cómo hacer una Prueba T en R</title>
-      <link>/2020/05/24/c%C3%B3mo-hacer-una-prueba-t-en-r/</link>
-      <pubDate>Sun, 24 May 2020 00:00:00 +0000</pubDate>
-      
-      <guid>/2020/05/24/c%C3%B3mo-hacer-una-prueba-t-en-r/</guid>
-      <description>Nivel: Básico (Curso introductorio de estadística)
-Nota: El énfasis de este escrito es en los aspectos de programación en R. Por lo que tratare de evitar formulas matemáticas siempre que sea posible.
-La prueba de T para dos promediosEn psicología y educación muchas veces deseamos comparar dos promedios de grupos independientes o pareados. Para esto podemos usar una Prueba T. Esta es una prueba estadística que nos permite comparar dos promedios cuando desconocemos las varianzas o desviaciones estándares de la población.</description>
     </item>
     
   </channel>

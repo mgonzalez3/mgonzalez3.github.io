@@ -2,48 +2,66 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Tags on Psychstats</title>
-    <link>https://mgonzalez3.github.io/tags/</link>
+    <link>/tags/</link>
     <description>Recent content in Tags on Psychstats</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Sun, 24 May 2020 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Wed, 03 Jun 2020 00:00:00 +0000</lastBuildDate>
     
-	<atom:link href="https://mgonzalez3.github.io/tags/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="/tags/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
+      <title>Covid-19</title>
+      <link>/tags/covid-19/</link>
+      <pubDate>Wed, 03 Jun 2020 00:00:00 +0000</pubDate>
+      
+      <guid>/tags/covid-19/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Medición</title>
+      <link>/tags/medici%C3%B3n/</link>
+      <pubDate>Wed, 03 Jun 2020 00:00:00 +0000</pubDate>
+      
+      <guid>/tags/medici%C3%B3n/</guid>
+      <description></description>
+    </item>
+    
+    <item>
       <title>Behrens-Fisher</title>
-      <link>https://mgonzalez3.github.io/tags/behrens-fisher/</link>
+      <link>/tags/behrens-fisher/</link>
       <pubDate>Sun, 24 May 2020 00:00:00 +0000</pubDate>
       
-      <guid>https://mgonzalez3.github.io/tags/behrens-fisher/</guid>
+      <guid>/tags/behrens-fisher/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Intro-para-R</title>
-      <link>https://mgonzalez3.github.io/tags/intro-para-r/</link>
+      <link>/tags/intro-para-r/</link>
       <pubDate>Sun, 24 May 2020 00:00:00 +0000</pubDate>
       
-      <guid>https://mgonzalez3.github.io/tags/intro-para-r/</guid>
+      <guid>/tags/intro-para-r/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Prueba-T</title>
-      <link>https://mgonzalez3.github.io/tags/prueba-t/</link>
+      <link>/tags/prueba-t/</link>
       <pubDate>Sun, 24 May 2020 00:00:00 +0000</pubDate>
       
-      <guid>https://mgonzalez3.github.io/tags/prueba-t/</guid>
+      <guid>/tags/prueba-t/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Welch-T</title>
-      <link>https://mgonzalez3.github.io/tags/welch-t/</link>
+      <link>/tags/welch-t/</link>
       <pubDate>Sun, 24 May 2020 00:00:00 +0000</pubDate>
       
-      <guid>https://mgonzalez3.github.io/tags/welch-t/</guid>
+      <guid>/tags/welch-t/</guid>
       <description></description>
     </item>
     
