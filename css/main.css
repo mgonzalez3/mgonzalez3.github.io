@@ -46,7 +46,7 @@ code {
 
 /*Styles the header-nav logo*/
 .nav {
-  max-width: 100%;
+  max-width: 800px;
   height: 30px;
   margin: 0 auto;
   padding: 0 8px;
