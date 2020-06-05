@@ -282,6 +282,10 @@ code {
     padding: 25px 0;
   }
 
+  .nav {
+    max-width: 800px;
+  }
+
   .nav-logo {
     float: left;
     margin: 6 0 0 -13px;
