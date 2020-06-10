@@ -50,7 +50,7 @@ code {
   height: 30px;
   margin: 0 auto;
   padding: 0 8px;
-  /*text-align: left;*/
+  text-align: right;
 }
 
 .nav-logo {
@@ -75,7 +75,6 @@ code {
   padding: 0;
   font-size: 16px;
   list-style: none;
-  float: right;
 }
 
 .nav-links li {
@@ -280,10 +279,6 @@ code {
 @media (min-width: 600px) {
   .header {
     padding: 25px 0;
-  }
-
-  .nav {
-    max-width: 800px;
   }
 
   .nav-logo {
