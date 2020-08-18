@@ -6,10 +6,19 @@
     <description>Recent content on Psychstats</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Wed, 03 Jun 2020 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Fri, 07 Aug 2020 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Algunas anotaciones sobre la r de Pearson</title>
+      <link>/2020/08/07/algunas-anotaciones-sobre-la-r-de-pearson/</link>
+      <pubDate>Fri, 07 Aug 2020 00:00:00 +0000</pubDate>
+      
+      <guid>/2020/08/07/algunas-anotaciones-sobre-la-r-de-pearson/</guid>
+      <description>r de PearsonPrueba de Hipótesis para rPrueba T con las rTransformación de FisherPara comparar dos valores de r que provienen de la misma muestraPara comparar más de dos valores de rReferenciasr de PearsonEn esta entrada voy presentar algunas anotaciones del folleto/panfleto de Chen &amp;amp; Popovich (2002). Es un excelente recurso y debería ser una lectura requerida para futuros investigadores en psicología y ciencias sociales.</description>
+    </item>
     
     <item>
       <title>Los Falsos Positivos en las Pruebas Rápidas</title>

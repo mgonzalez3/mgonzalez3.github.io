@@ -31,17 +31,4 @@
   type    = {Journal Article},
 }
 
-@Book{Chen2002,
-  author    = {Chen, Peter Y. and Popovich, Paula M.},
-  publisher = {Sage},
-  title     = {Correlation: Parametric and Nonparametric measures},
-  year      = {2002},
-  address   = {Thousand Oaks, CA},
-  isbn      = {0-7619-2228-8},
-  series    = {Series: Quantitative Applications in the Social Sciences},
-  volume    = {07-139},
-  pages     = {95},
-  type      = {Book},
-}
-
 @Comment{jabref-meta: databaseType:bibtex;}

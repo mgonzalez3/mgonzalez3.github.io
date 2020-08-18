@@ -47,15 +47,13 @@ code {
 /*Styles the header-nav logo*/
 .nav {
   max-width: 800px;
-  height: 30px;
   margin: 0 auto;
-  padding: 0 8px;
+  padding: 0 15px;
   text-align: right;
 }
 
 .nav-logo {
   float: left;
-  margin-bottom: 15px;
   transition: transform 150ms ease-out;
 }
 

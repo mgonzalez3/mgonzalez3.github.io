@@ -6,10 +6,19 @@
     <description>Recent content in Categories on Psychstats</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Wed, 03 Jun 2020 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Fri, 07 Aug 2020 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="/categories/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Estadísticas</title>
+      <link>/categories/estad%C3%ADsticas/</link>
+      <pubDate>Fri, 07 Aug 2020 00:00:00 +0000</pubDate>
+      
+      <guid>/categories/estad%C3%ADsticas/</guid>
+      <description></description>
+    </item>
     
     <item>
       <title>Opiniones</title>
@@ -17,15 +26,6 @@
       <pubDate>Wed, 03 Jun 2020 00:00:00 +0000</pubDate>
       
       <guid>/categories/opiniones/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Estadísticas</title>
-      <link>/categories/estad%C3%ADsticas/</link>
-      <pubDate>Sun, 24 May 2020 00:00:00 +0000</pubDate>
-      
-      <guid>/categories/estad%C3%ADsticas/</guid>
       <description></description>
     </item>
     

@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en-us">
+  <head>
+    <meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="generator" content="Hugo 0.71.0" />
+
+
+<title>R: Comparación múltiple la prueba T de Dunn-Šidák - Psychstats</title>
+<meta property="og:title" content="R: Comparación múltiple la prueba T de Dunn-Šidák - Psychstats">
+
+
+  <link href='/favicon.ico' rel='icon' type='image/x-icon'/>
+
+
+
+  
+
+
+
+
+
+
+
+<link rel="stylesheet" href="/css/fonts.css" media="all">
+<link rel="stylesheet" href="/css/main.css" media="all">
+
+
+<script src="https://kit.fontawesome.com/c23cf4bc3c.js" crossorigin="anonymous"></script>
+
+
+<link rel="stylesheet" href="/path/to/folder/css/academicons.min.css"/>
+
+
+  </head>
+  <body>
+    <div class="wrapper">
+      <header class="header">
+        <nav class="nav">
+
+  <a href="/" class="nav-logo">
+    <img src="/images/logo.png"
+         width="80"
+         height="50"
+         alt="Logo">
+  </a>
+
+
+  <ul class="nav-links">
+    
+    <li><a href="/">Blog</a></li>
+    
+    <li><a href="/biografia/">Sobre Mí</a></li>
+    
+    <li><a href="/publicaciones/">Publicaciones</a></li>
+    
+    <li><a href="https://github.com/mgonzalez3">GitHub</a></li>
+    
+    <li><a href="../files/MGG-CV-2020.pdf">CV</a></li>
+    
+  </ul>
+</nav>
+
+      </header>
+
+
+<main class="content" role="main">
+
+  <article class="article">
+    
+    <span class="article-duration">3 min read</span>
+    
+
+    <h1 class="article-title">R: Comparación múltiple la prueba T de Dunn-Šidák</h1>
+
+    
+    <span class="article-date">2020-07-28</span>
+    
+
+    <div class="article-content">
+      
+<script src="/rmarkdown-libs/header-attrs/header-attrs.js"></script>
+
+
+<p><strong>Nivel de dificultad:</strong> Intermedio-Avanzado. El nivel de dificultad es mi opinión de la dificultad del material pensando en una audiencia de investigadores en psicología y ciencias sociales con interés pero poca exposición al tema.</p>
+<p><strong>Conocimientos previos requeridos:</strong> Debes conocer que es una prueba de Anova y el diseño experimental de comparación de grupos con una variable independiente con más de 2 niveles.</p>
+<div id="escenario" class="section level2">
+<h2>Escenario</h2>
+<p>El escenario donde utilizamos este tipo de prueba es un experimento o comparación de grupos con n similares entre los grupos. Realizamos alguna intervención experimental que tiene más de 2 niveles sea una:
+- terapia psicológica (6 sesiones, 12 sesiones, control)
+- programas educativos (intervención de lectura nueva, intervención de lectura tradicional, control),
+- o cualquier otra intervención con más de 2 niveles.</p>
+<p>En estos casos deseamos conocer si existe una diferencia global (hay diferencias entre los promedios en algún lugar), y luego deseamos explorar donde se encuentra esta diferencia. Es importante resaltar que debemos pensar las razones por las cuales seleccionamos los grupos y el por qué deseamos compararlos. Siempre debemos pensar que queremos saber y sus razones no debemos correr análisis porque si.</p>
+</div>
+<div id="análisis-estadístico" class="section level2">
+<h2>Análisis Estadístico</h2>
+<p>Another way of looking at the data from Eysenck’s (1974) study is to compare four groups
+of subjects. One group consisted of Younger subjects who were presented the words to be
+recalled in a condition that elicited a Low level of processing. A second group involved
+Younger subjects who were given a task requiring the Highest level of processing (as in
+Exercise 11.2). The two other groups were Older subjects who were given tasks requiring
+either Low or High levels of processing. The data follow.</p>
+<p>Younger/Low: 8 6 4 6 7 6 5 7 9 7
+Younger/High: 21 19 17 15 22 16 22 22 18 21
+Older/Low: 9 8 6 8 10 4 6 5 7 7
+Older/High: 10 19 14 5 10 11 14 15 11 11</p>
+<p><strong>Contrastes Lineares</strong>
+Comparación 1: -1/2 -1/2 1/2 1/2
+Comparación 2: -1 1 0 0
+Comparación 3: 0 0 -1 1</p>
+<div id="anova" class="section level3">
+<h3>ANOVA</h3>
+</div>
+<div id="comparación-múltiple" class="section level3">
+<h3>Comparación Múltiple</h3>
+<div id="formula-para-la-prueba-t-de-dunn-šidák" class="section level4">
+<h4>Formula para la prueba T de Dunn-Šidák</h4>
+<p><span class="math display">\[\begin{equation}
+\begin{split}
+
+t&#39; = \frac{\bar{x}_i - \bar{x}_j}{\sqrt{ \frac{MSE_{i}}{n_i} + \frac{MSE_{j}}{n_j} }} \\
+= \frac{ \sum{a_{k} x_{k}} }{ \sqrt{ \frac{\sum{a_{k}MSE}} {\sum{n} } } } \\
+= \frac{ \psi }{ \sqrt{ \frac{\sum{a_{k}MSE}} {\sum{n} } } }
+
+\end{split}
+\end{equation}\]</span></p>
+<p>Antes esta prueba utilizaba unas tablas de valores especiales para la prueba t. Similar a las tablas especiales para la prueba T de Welch’s, que ya no son necesarias, pues podemos obtener los valores exactos para la distribución de t con programados estadísticos como R.</p>
+</div>
+</div>
+</div>
+<div id="resumen-de-la-entrada" class="section level2">
+<h2>Resumen de la entrada</h2>
+</div>
+
+    </div>
+  </article>
+
+  
+    <span>
+<section id="comments">
+  <div id="disqus_thread"></div>
+  <script>
+  var disqus_config = function () {
+  
+  };
+  (function() {
+    var inIFrame = function() {
+      var iframe = true;
+      try { iframe = window.self !== window.top; } catch (e) {}
+      return iframe;
+    };
+    if (inIFrame()) return;
+    var d = document, s = d.createElement('script');
+    s.src = '//psychstats.disqus.com/embed.js'; s.async = true;
+    s.setAttribute('data-timestamp', +new Date());
+    (d.head || d.body).appendChild(s);
+  })();
+  </script>
+  <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+</section>
+
+</span>
+  
+
+</main>
+
+      <footer class="footer">
+        <ul class="footer-links">
+          <li>
+            <a href="/index.xml" type="application/rss+xml" target="_blank">RSS feed</a>
+          </li>
+          <li>
+            <a href="https://gohugo.io/" class="footer-links-kudos">Made with <img src="/images/hugo-logo.png" alt="Img link to Hugo website" width="22" height="22"></a>
+          </li>
+        </ul>
+        <p>&copy; 2020 Manuel González-González</p>
+      </footer>
+
+    </div>
+    
+
+    
+<script src="/js/math-code.js"></script>
+<script async src="//cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-MML-AM_CHTML"></script>
+
+
+    
+  </body>
+</html>
+

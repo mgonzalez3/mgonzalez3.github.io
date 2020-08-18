@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="en-us">
+  <head>
+    <meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="generator" content="Hugo 0.71.0" />
+
+
+<title>Algunas anotaciones sobre la r de Pearson - Psychstats</title>
+<meta property="og:title" content="Algunas anotaciones sobre la r de Pearson - Psychstats">
+
+
+  <link href='/favicon.ico' rel='icon' type='image/x-icon'/>
+
+
+
+  
+
+
+
+
+
+
+
+<link rel="stylesheet" href="/css/fonts.css" media="all">
+<link rel="stylesheet" href="/css/main.css" media="all">
+
+
+<script src="https://kit.fontawesome.com/c23cf4bc3c.js" crossorigin="anonymous"></script>
+
+
+<link rel="stylesheet" href="/path/to/folder/css/academicons.min.css"/>
+
+
+  </head>
+  <body>
+    <div class="wrapper">
+      <header class="header">
+        <nav class="nav">
+
+  <a href="/" class="nav-logo">
+    <img src="/images/logo.png"
+         width="80"
+         height="50"
+         alt="Logo">
+  </a>
+
+
+  <ul class="nav-links">
+    
+    <li><a href="/">Blog</a></li>
+    
+    <li><a href="/biografia/">Sobre Mí</a></li>
+    
+    <li><a href="/publicaciones/">Publicaciones</a></li>
+    
+    <li><a href="https://github.com/mgonzalez3">GitHub</a></li>
+    
+    <li><a href="../files/MGG-CV-2020.pdf">CV</a></li>
+    
+  </ul>
+</nav>
+
+      </header>
+
+
+<main class="content" role="main">
+
+  <article class="article">
+    
+    <span class="article-duration">4 min read</span>
+    
+
+    <h1 class="article-title">Algunas anotaciones sobre la r de Pearson</h1>
+
+    
+    <span class="article-date">2020-08-07</span>
+    
+
+    <div class="article-content">
+      
+<script src="/rmarkdown-libs/header-attrs/header-attrs.js"></script>
+
+<div id="TOC">
+<ul>
+<li><a href="#r-de-pearson">r de Pearson</a></li>
+<li><a href="#prueba-de-hipótesis-para-r">Prueba de Hipótesis para r</a>
+<ul>
+<li><a href="#prueba-t-con-las-r">Prueba T con las r</a></li>
+<li><a href="#transformación-de-fisher">Transformación de Fisher</a></li>
+<li><a href="#para-comparar-dos-valores-de-r-que-provienen-de-la-misma-muestra">Para comparar dos valores de r que provienen de la misma muestra</a></li>
+<li><a href="#para-comparar-más-de-dos-valores-de-r">Para comparar más de dos valores de r</a></li>
+</ul></li>
+<li><a href="#referencias">Referencias</a></li>
+</ul>
+</div>
+
+<div id="r-de-pearson" class="section level2">
+<h2>r de Pearson</h2>
+<p>En esta entrada voy presentar algunas anotaciones del folleto/panfleto de <span class="citation">Chen &amp; Popovich (2002)</span>. Es un excelente recurso y debería ser una lectura requerida para futuros investigadores en psicología y ciencias sociales. Las anotaciones no están detalladas son más bien una introducción al contenido de este panfleto.</p>
+<ul>
+<li>La necesidad de utilizar modelos causales en psicología. La estadística utilizada en particular no es la que determina si se pueden realizar inferencias causales, para esto necesitamos un diseño de investigación solido con un buen fundamento lógico.<br />
+</li>
+<li>Las correlaciones solo proveen pistas o evidencia a favor o en contra de nuestros modelos. La presencia de una asociación/correlación no es suficiente para concluir que hay una relación causal, pero su ausencia es una pista importante de que no hay causalidad (es necesaria).</li>
+<li><strong>El motivo para realizar la correlación es importante, ya que de esto dependen los supuestos.</strong> Deseamos utilizarlo como una información descriptiva de la muestra, deseamos estimar la correlación poblacional, o probar si la correlación es distinta de 0.</li>
+<li>La r de Pearson no es una proporción para esto tenemos <span class="math inline">\(r^2\)</span>.</li>
+<li>La r de Pearson se puede tratar como un tamaño del efecto/relación entre dos variables.</li>
+<li>A los psicólogos no nos gusta ver formulas o ecuaciones matemáticas, pero revelan mucha información de lo que esta pasando. Por ejemplo todas las formulas equivalentes para la r de Pearson, incluyendo todas sus variantes para casos especiales. Todas estas son equivalentes</li>
+</ul>
+<p><span class="math display">\[\begin{equation}
+\begin{split}
+
+r = \frac{Z_{X_i} Z_{Y_i}} {n}\\
+= \frac{\sum{\frac{(X_i - \bar{X_i})(X_i - \bar{X_i})}{n}} } {S_XS_Y}\\
+= \frac{ \sum{X_i Y_i} \:-\: \frac{\sum{X_i} \sum{Y_i} } {n} } {\sqrt{ (\sum{X_i^2} \:-\: \frac{(\sum{X_i})^2}{n} )(\sum{Y_i^2} \:-\: \frac{(\sum{Y_i})^2}{n} )}} 
+
+\end{split}
+\end{equation}\]</span></p>
+<p>Pensar en la correlación de Pearson como el promedio de las puntuaciones Z de las variables observadas es fácil de recordar.</p>
+</div>
+<div id="prueba-de-hipótesis-para-r" class="section level2">
+<h2>Prueba de Hipótesis para r</h2>
+<ul>
+<li>Los supuestos necesarios son los siguientes:
+<ul>
+<li>La distribución bi-variada en la población es normal. Para esto sumamos ambas variables y observamos un histograma, gráfico de QQ , o PP.</li>
+<li>La relación entre las dos variables es lineal. Para esto observamos un gráfico de puntos (scatterplot).</li>
+</ul></li>
+<li>La r de Pearson (el valor observado) es un estimador sesgado de la correlación en la población. Para que no tenga un sesgo debemos realizar una correción. El estimador no sesgado es:</li>
+</ul>
+<p><span class="math display">\[r_{adj} = \sqrt{ \frac{(n - 1)r^2-1}{n-2} }\]</span>
+- El error estándar de la r de pearson es:</p>
+<p><span class="math display">\[\sigma_r= \sqrt{\frac{(1-\rho^2)^2}{n}}\]</span></p>
+<ul>
+<li>La r de Pearson <strong>No</strong> se aproxima a una distribución normal cuando el valor absoluto de la correlación en la población es mayor de <span class="math inline">\(\rho = .30\)</span>. No importa el tamaño de la muestra.</li>
+</ul>
+<div id="prueba-t-con-las-r" class="section level3">
+<h3>Prueba T con las r</h3>
+<ul>
+<li>Solo para situaciones donde la hipótesis nula es <span class="math inline">\(\rho = 0\)</span>.
+<ul>
+<li>La razón de esta limitación es que la r cuando difiere de 0 en la población no tiene una distribución normal.</li>
+</ul></li>
+<li>La distribución de t cuando <span class="math inline">\(\rho = 0\)</span> es:</li>
+</ul>
+<p><span class="math display">\[\frac{r\sqrt{n-2}}{\sqrt{1-r^2}}\]</span></p>
+<blockquote>
+<p>Siempre debemos controlar por el error de familia (Family Wise Error). Mientras más comparaciones realizamos para determinar sí las correlaciones son siginificativas mayor es la probabilidad de cometer un error tipo I.</p>
+</blockquote>
+</div>
+<div id="transformación-de-fisher" class="section level3">
+<h3>Transformación de Fisher</h3>
+<ul>
+<li>Para situaciones donde la hipótesis nula es <span class="math inline">\(\rho &gt;= 0\)</span>.</li>
+<li>Dado que la r de Pearson no aproxima una distribución en las condiciones indicadas anteriormente (<span class="math inline">\(\rho &gt; .30\)</span>), podemos hacer inferencias con la transformación de Fisher. <strong>Sustituimos <span class="math inline">\(\rho\)</span> por nuestro estimador que es la r de pearson observada</strong></li>
+</ul>
+<p><span class="math display">\[z_r =0.5 * log_e(\frac{1+\rho}{1-\rho})\]</span></p>
+<p>El error estándar de la transformación de Fisher es:</p>
+<p><span class="math display">\[\sigma_{z_r}=\sqrt{\frac{1}{n-3}}\]</span></p>
+<ul>
+<li>Podemos realizar la siguiente prueba estadística y comparar con el valor crítico de z:</li>
+</ul>
+<p><span class="math display">\[z = \frac{z_r - z_o}{\sigma_r}\]</span>
+- También podemos probar si la correlación es distinta de 0 a un nivel <span class="math inline">\(\alpha = .05\)</span> creando un intervalo de confianza <span class="math inline">\(z_r \:\pm\: z_{\alpha} * \sigma_{z_r}\)</span>. Para hipótesis de ambas direcciones el valor para un <span class="math inline">\(\alpha = .05\)</span> es de 1.96.</p>
+<ul>
+<li><p>Sí las medidas entre cada par de variables son independientes esta prueba es robusta a violaciones de normalidad con <span class="math inline">\(n \geq 30\)</span>.</p></li>
+<li><p>Para reportar los valores <span class="math inline">\(z_r\)</span> debemos convertirlos a la r de pearson</p></li>
+</ul>
+<p><span class="math display">\[r = \frac{e^{2z_r}-1}{e^{2z_r}+1}\]</span></p>
+</div>
+<div id="para-comparar-dos-valores-de-r-que-provienen-de-la-misma-muestra" class="section level3">
+<h3>Para comparar dos valores de r que provienen de la misma muestra</h3>
+<p><span class="math display">\[z = \frac{z_{r_x}- z_{r_y}}{\sigma_{r_x} + \sigma_{r_y}}\]</span></p>
+</div>
+<div id="para-comparar-más-de-dos-valores-de-r" class="section level3">
+<h3>Para comparar más de dos valores de r</h3>
+<ul>
+<li><p>Para comparar si multiples valores de r difieren entre sí $_1 = _2 = _3 =…= _k $ usamos la distribución de Ji-cuadrado <span class="math inline">\(X^2\)</span>. En este caso la hipótesis alterna es que por lo menos una correlación es distinta.</p></li>
+<li><p>La ecuación es la siguiente para <span class="math inline">\(k &gt; 1\)</span> y con grados de libertad <span class="math inline">\(k-1\)</span></p></li>
+</ul>
+<p><span class="math display">\[X^2 = (\sum(n_k - 3)z_{rk}^2)-\frac{[\sum(n_k - 3)z_{rk}]^2}{\sum(n_k - 3)}\]</span></p>
+</div>
+</div>
+<div id="referencias" class="section level2 unnumbered">
+<h2>Referencias</h2>
+<div id="refs" class="references hanging-indent">
+<div id="ref-Chen2002">
+<p>Chen, P. Y., &amp; Popovich, P. M. (2002). <em>Correlation: Parametric and nonparametric measures</em> (Vols. 7-139, p. 95) [Book]. Sage.</p>
+</div>
+</div>
+</div>
+
+    </div>
+  </article>
+
+  
+    <span>
+<section id="comments">
+  <div id="disqus_thread"></div>
+  <script>
+  var disqus_config = function () {
+  
+  };
+  (function() {
+    var inIFrame = function() {
+      var iframe = true;
+      try { iframe = window.self !== window.top; } catch (e) {}
+      return iframe;
+    };
+    if (inIFrame()) return;
+    var d = document, s = d.createElement('script');
+    s.src = '//psychstats.disqus.com/embed.js'; s.async = true;
+    s.setAttribute('data-timestamp', +new Date());
+    (d.head || d.body).appendChild(s);
+  })();
+  </script>
+  <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+</section>
+
+</span>
+  
+
+</main>
+
+      <footer class="footer">
+        <ul class="footer-links">
+          <li>
+            <a href="/index.xml" type="application/rss+xml" target="_blank">RSS feed</a>
+          </li>
+          <li>
+            <a href="https://gohugo.io/" class="footer-links-kudos">Made with <img src="/images/hugo-logo.png" alt="Img link to Hugo website" width="22" height="22"></a>
+          </li>
+        </ul>
+        <p>&copy; 2020 Manuel González-González</p>
+      </footer>
+
+    </div>
+    
+
+    
+<script src="/js/math-code.js"></script>
+<script async src="//cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-MML-AM_CHTML"></script>
+
+
+    
+  </body>
+</html>
+
