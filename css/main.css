@@ -274,7 +274,7 @@ code {
 }
 
 /*for other mediums*/
-@media (min-width: 600px) {
+@media (min-width: 800px) {
   .header {
     padding: 25px 0;
   }
