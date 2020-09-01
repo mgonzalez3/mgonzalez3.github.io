@@ -1,14 +1,14 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Opiniones on Psychstats</title>
-    <link>/categories/opiniones/</link>
-    <description>Recent content in Opiniones on Psychstats</description>
+    <title>Ciencia on Psychstats</title>
+    <link>/tags/ciencia/</link>
+    <description>Recent content in Ciencia on Psychstats</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <lastBuildDate>Fri, 28 Aug 2020 00:00:00 +0000</lastBuildDate>
     
-	<atom:link href="/categories/opiniones/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="/tags/ciencia/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
@@ -18,16 +18,6 @@
       
       <guid>/2020/08/28/como-podemos-hacer-ciencia/</guid>
       <description>Mi percepción de la ciencia en psicologíaAlgunos retosReferenciasMi percepción de la ciencia en psicologíaNo tengo una respuesta a la pregunta de cómo podemos hacer buena ciencia psicológica. Pero como investigador interesado en el tema de las emociones e igualmente de las estadísticas, periódicamente pienso en el estado de la ciencia psicológica y mi rol dentro de ella. En estos momentos tuve la oportunidad de leer algunos artículos clásicos uno por Cronbach ((1975)) y otro por Meehl ((1990)).</description>
-    </item>
-    
-    <item>
-      <title>Los Falsos Positivos en las Pruebas Rápidas</title>
-      <link>/2020/06/03/los-falsos-positivos-en-las-pruebas-r%C3%A1pidas/</link>
-      <pubDate>Wed, 03 Jun 2020 00:00:00 +0000</pubDate>
-      
-      <guid>/2020/06/03/los-falsos-positivos-en-las-pruebas-r%C3%A1pidas/</guid>
-      <description>La situación en Puerto RicoDatos reportados por SaludEstimación de los Falsos PositivosReferenciasActualización: El Departmento de Salud indicó el 10 de junio del 2020 que no continuara reportando los casos de pruebas serológicas como casos confirmados. Primera Hora
-Resumen Breve: Existen varias razones para no reportar los resultados de las pruebas rápidas como casos nuevos. Una de las razones es que gran parte de los casos de Covid-19 reportados podrían ser falsos positivos.</description>
     </item>
     
   </channel>

@@ -6,15 +6,42 @@
     <description>Recent content in Tags on Psychstats</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Fri, 07 Aug 2020 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Fri, 28 Aug 2020 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="/tags/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
+      <title>Ciencia</title>
+      <link>/tags/ciencia/</link>
+      <pubDate>Fri, 28 Aug 2020 00:00:00 +0000</pubDate>
+      
+      <guid>/tags/ciencia/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Emociones</title>
+      <link>/tags/emociones/</link>
+      <pubDate>Fri, 28 Aug 2020 00:00:00 +0000</pubDate>
+      
+      <guid>/tags/emociones/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Psicología</title>
+      <link>/tags/psicolog%C3%ADa/</link>
+      <pubDate>Fri, 28 Aug 2020 00:00:00 +0000</pubDate>
+      
+      <guid>/tags/psicolog%C3%ADa/</guid>
+      <description></description>
+    </item>
+    
+    <item>
       <title>Correlaciones</title>
       <link>/tags/correlaciones/</link>
-      <pubDate>Fri, 07 Aug 2020 00:00:00 +0000</pubDate>
+      <pubDate>Tue, 18 Aug 2020 00:00:00 +0000</pubDate>
       
       <guid>/tags/correlaciones/</guid>
       <description></description>
@@ -23,7 +50,7 @@
     <item>
       <title>Teoría</title>
       <link>/tags/teor%C3%ADa/</link>
-      <pubDate>Fri, 07 Aug 2020 00:00:00 +0000</pubDate>
+      <pubDate>Tue, 18 Aug 2020 00:00:00 +0000</pubDate>
       
       <guid>/tags/teor%C3%ADa/</guid>
       <description></description>

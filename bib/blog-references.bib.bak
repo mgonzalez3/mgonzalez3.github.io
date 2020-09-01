@@ -31,4 +31,40 @@
   type    = {Journal Article},
 }
 
+@Book{Chen2002,
+  author    = {Chen, Peter Y. and Popovich, Paula M.},
+  publisher = {Sage},
+  title     = {Correlation: Parametric and Nonparametric measures},
+  year      = {2002},
+  address   = {Thousand Oaks, CA},
+  isbn      = {0-7619-2228-8},
+  series    = {Series: Quantitative Applications in the Social Sciences},
+  volume    = {07-139},
+  pages     = {95},
+  type      = {Book},
+}
+
+@Article{Bavel2020,
+  author   = {Bavel, Jay J. Van and Baicker, Katherine and Boggio, Paulo S. and Capraro, Valerio and Cichocka, Aleksandra and Cikara, Mina and Crockett, Molly J. and Crum, Alia J. and Douglas, Karen M. and Druckman, James N. and Drury, John and Dube, Oeindrila and Ellemers, Naomi and Finkel, Eli J. and Fowler, James H. and Gelfand, Michele and Han, Shihui and Haslam, S. Alexander and Jetten, Jolanda and Kitayama, Shinobu and Mobbs, Dean and Napper, Lucy E. and Packer, Dominic J. and Pennycook, Gordon and Peters, Ellen and Petty, Richard E. and Rand, David G. and Reicher, Stephen D. and Schnall, Simone and Shariff, Azim and Skitka, Linda J. and Smith, Sandra Susan and Sunstein, Cass R. and Tabri, Nassim and Tucker, Joshua A. and Linden, Sander van der and Lange, Paul van and Weeden, Kim A. and Wohl, Michael J. A. and Zaki, Jamil and Zion, Sean R. and Willer, Robb},
+  journal  = {Nature Human Behaviour},
+  title    = {Using social and behavioural science to support COVID-19 pandemic response},
+  year     = {2020},
+  issn     = {2397-3374},
+  number   = {5},
+  pages    = {460--471},
+  volume   = {4},
+  abstract = {The COVID-19 pandemic represents a massive global health crisis. Because the crisis requires large-scale behaviour change and places significant psychological burdens on individuals, insights from the social and behavioural sciences can be used to help align human behaviour with the recommendations of epidemiologists and public health experts. Here we discuss evidence from a selection of research topics relevant to pandemics, including work on navigating threats, social and cultural influences on behaviour, science communication, moral decision-making, leadership, and stress and coping. In each section, we note the nature and quality of prior research, including uncertainty and unsettled issues. We identify several insights for effective response to the COVID-19 pandemic and highlight important gaps researchers should move quickly to fill in the coming weeks and months.},
+  refid    = {Bavel2020},
+  url      = {https://doi.org/10.1038/s41562-020-0884-z},
+}
+
+@Article{Cronbach1975,
+  author  = {Cronbach, J. L.},
+  journal = {American Psychologist},
+  title   = {Beyond the two disciplines of scientific psychology},
+  year    = {1975},
+  pages   = {116-127},
+  type    = {Journal Article},
+}
+
 @Comment{jabref-meta: databaseType:bibtex;}
